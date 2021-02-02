@@ -7,9 +7,9 @@
 # @Software: PyCharm
 
 # 迁移点播数据类型统计
-# python2.7 saas_vod_migrate_to_paas.py --config /vhallapp/config/vhall_vod_v2_script/config.ini -c type -i ./pingan_migration.csv
+# python2.7 saas_vod_migrate_to_paas.py --config /testapp/config/test_vod_v2_script/config.ini -c type -i ./migration.csv
 # 迁移点播数据
-# time python2.7 saas_vod_migrate_to_paas.py --config "/vhallapp/config/vhall_vod_v2_script/config.ini" -i "./pingan_1_test.csv" -y "./mappinf_file.csv" -f "/vhallapp/vhall_vod_v2_script/flash_covert_h5.js" -d "/vhallapp/vhall_vod_v2_script/mapping.json" -a "6147b94a"
+# time python2.7 saas_vod_migrate_to_paas.py --config "/testapp/config/test_vod_v2_script/config.ini" -i "./test.csv" -y "./mappinf_file.csv" -f "/testapp/test_vod_v2_script/flash_covert_h5.js" -d "/testapp/test_vod_v2_script/mapping.json" -a "6147b94a"
 
 import optparse
 
@@ -34,7 +34,7 @@ from db_vod_manage import DbVodManage
 from vio.vio import VioHander
 from mysql_ext import MySqlBus
 
-log_path = config['global'].get('log_dir', "/vhallapp/logs/vhall_vod_v2_script/").strip()
+log_path = config['global'].get('log_dir', "/testapp/logs/test_vod_v2_script/").strip()
 log_name = "saas_vod_migrate_to_paas"
 logger = loggers.get_logger(log_path, log_name)
 
